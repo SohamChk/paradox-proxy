@@ -19,7 +19,4 @@ struct Logger {
 // Declare initial Logger method
 void initLogger(Logger *logger);
 
-void logError(Logger *logger, const char *format)
-void logWarning(Logger *logger, const char *format)
-void logInfo(Logger *logger, const char *format)
-void logDebug(Logger *logger, const char *format)
+void log(Logger *logger, LogLevel messageLevel, const char *format)
