@@ -1,7 +1,7 @@
-// Enum to represent log levels
+// Enum for log levels
 typedef enum {
-    ERROR,
-    WARNING
-    INFO,
     DEBUG
+    INFO,
+    WARNING,
+    ERROR,
 } LogLevel;

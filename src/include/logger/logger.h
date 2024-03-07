@@ -1,22 +1,17 @@
 #include <levels.h>
+#include <../include/constants.h>
 
+Logger logger = {LOG_LEVEL}; // Set the default log level
 
-// Struct to represent colors
+#ifndef LOGGER_H
+#define LOGGER_H
+
+// Global configuration structure
 typedef struct {
-    const char *reset;
-    const char *red;
-    const char *green;
-    const char *yellow;
-    const char *blue;
-} LoggerColor;
+    LogLevel logLevel;
+} Logger;
 
-// Logger Struct
-struct Logger {
-    LogLevel level;
-    LoggerColor colors;
-};
+// Logger function to print log messages
+void logMessage(LogLevel level, const char* message);
 
-// Declare initial Logger method
-void initLogger(Logger *logger);
-
-void log(Logger *logger, LogLevel messageLevel, const char *format)
+#endif // LOGGER_H
