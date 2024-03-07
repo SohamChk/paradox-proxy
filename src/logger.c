@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <time.h>
 #include <include/logger/logger.h>
+#include <../include/constants.h>
+
+Logger logger = {LOG_LEVEL}; // Set the default log level
 
 // Logger function to print log messages
 void logMessage(LogLevel level, const char* message) {
