@@ -1,15 +1,15 @@
 #include <stdio.h> 
 #include <cjson/cJSON.h> 
 
-#include <include/config/load_config.h>
+#include <include/config/config.h>
 #include <../include/constants.h>
 #include <include/logger/logger.h>
 
-void loadConfig( Logger *logger ) {
+void loadConfig() {
     // open the config JSON
     FILE *fp = fopen(PROXY_CONFIG, "r");
     if (fp == NULL) {
-        log(&logger, ERROR, "Unable to open config file"); 
+        logMessage(ERROR, "Unable to open config file"); 
         return 1; 
     }
 
@@ -23,7 +23,7 @@ void loadConfig( Logger *logger ) {
     if (json == NULL) { 
         const char *error_ptr = cJSON_GetErrorPtr(); 
         if (error_ptr != NULL) { 
-            printf("Error: %s\n", error_ptr); 
+            logMessage(ERROR, error_ptr); 
         } 
         cJSON_Delete(json); 
         return 1; 
