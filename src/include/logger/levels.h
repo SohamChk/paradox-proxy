@@ -1,6 +1,6 @@
 // Enum for log levels
 typedef enum {
-    DEBUG
+    DEBUG,
     INFO,
     WARNING,
     ERROR,

@@ -1,0 +1,25 @@
+{
+    "env": {
+        "myIncludePath": ["${workspaceFolder}/include", "${workspaceFolder}/src"],
+        "myDefines": ["DEBUG", "MY_FEATURE=1"]
+    },
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "browse": {
+                "path": ["${myIncludePath}", "/usr/include", "${workspaceFolder}"],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            }
+        }
+    ],
+    "version": 4
+}

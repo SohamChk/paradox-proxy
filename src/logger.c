@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
-#include <include/logger/logger.h>
-#include <../include/constants.h>
+#include <logger/logger.h>
+#include </constants.h>
 
 Logger logger = {LOG_LEVEL}; // Set the default log level
 
