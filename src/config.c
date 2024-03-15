@@ -6,18 +6,18 @@
 #include <logger/logger.h>
 
 void loadConfig() {
-    char buffer[1024];
+    char buffer[1024];  // buffer to read config file
 
     // open the config JSON
-    FILE *fp = fopen(PROXY_CONFIG, "r");
+    FILE *fp = fopen(PROXY_CONFIG, "r");    // `PROXY_CONFIG` is set in the `constants.h` file
     if (fp == NULL) {
         logMessage(ERROR, "Unable to open config file"); 
-        exit(1); // Terminate program with error status 
+        return 1; // Return a non-zero value 
     }
 
     // Read file line by line and print its contents
     while (fgets(buffer, sizeof(buffer), fp) != NULL) {
-        printf("%s", buffer);
+        
     }
 
     // Close the file

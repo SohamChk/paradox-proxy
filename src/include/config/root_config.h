@@ -6,6 +6,6 @@
 struct RootConfig {
     int maxConn;   // Define the max number of connections allowed
     HTTPConfig http_conf[1];    // The minimum required http config is for port 80
-}
+};
 
 #endif
