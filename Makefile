@@ -14,7 +14,7 @@ SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 OBJ_FILES = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRC_FILES))
 
 # Executable
-TARGET = $(BIN_DIR)/my_program
+TARGET = $(BIN_DIR)/paradox-proxy
 
 # Phony targets
 .PHONY: all clean

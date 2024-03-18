@@ -1,1 +1,15 @@
-.vscode/
+# Ignore compiled binaries
+/bin/
+/build/
+
+# Ignore compiled libraries
+/lib/
+
+# Ignore any IDE or editor-specific files
+*.vscode
+*.idea
+*.DS_Store
+
+# Ignore any executables
+*.exe
+*.out

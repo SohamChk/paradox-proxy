@@ -1,7 +1,8 @@
-#include <include/logger/logger.h>
-#include <include/config/config.h>
+#include <logger.h>
+#include <config.h>
 
-void main() {
-    logMessage(DEBUG, 'Running main ....');
+int main() {
+    logMessage(DEBUG, "Running main ....");
     loadConfig();
+    return 0;
 }

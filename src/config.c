@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
+
 #include <constants.h>
+#include <config.h>
+#include <logger.h>
 
-#include <config/config.h>
-#include <logger/logger.h>
-
-void loadConfig() {
+int loadConfig() {
     char buffer[1024];  // buffer to read config file
     char* configData;
     long fileLength;
@@ -35,5 +36,5 @@ void loadConfig() {
     // Close the file
     fclose(fp);
 
-    return 0; 
+    return 0;
 }
