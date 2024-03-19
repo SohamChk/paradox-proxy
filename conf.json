@@ -1,0 +1,9 @@
+{
+    "maxConn": 10,
+    "http_conf": [
+        {
+            "listenPort": 80,
+            "ipv": 4
+        }
+    ]
+}
