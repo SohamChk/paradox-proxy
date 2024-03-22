@@ -6,6 +6,14 @@
 #include <config.h>
 #include <logger.h>
 
+int parseConfig(char* configData) {
+
+    printf("COnfig %s", configData);
+
+    free( configData );
+    return 0;
+}
+
 int loadConfig() {
     char buffer[1024];  // buffer to read config file
     char* configData;
@@ -31,10 +39,8 @@ int loadConfig() {
         strcat(configData, buffer);
     }
 
-    printf("config %s\n", configData);
-
     // Close the file
     fclose(fp);
 
-    return 0;
+    return parseConfig(configData);
 }
